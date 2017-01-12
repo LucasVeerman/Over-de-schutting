@@ -48,10 +48,14 @@ switch($action){
                 include 'model/delete_item.php';
             break;
             case 'insert':
-            
+                $templateParser->display('cms_insert.tpl');  
             break;
             case 'edit':
-        
+                $id = isset($_GET['id'])?$_GET['id']:0;
+                include 'model/select_one.php';
+//                include 'model/update.php';
+                $templateParser->assign('result',$result);
+                $templateParser->display('edit.tpl');
             break;
         }
        
