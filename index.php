@@ -29,6 +29,9 @@ switch($action){
     case 'edam':
         $templateParser->display('locations.tpl');
     break;
+    case 'agenda':
+        $templateParser->display('agenda.tpl');
+    break;
     case 'contact':
         $templateParser->display('contact.tpl');
         
