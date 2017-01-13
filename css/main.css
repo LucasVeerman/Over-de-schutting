@@ -5098,6 +5098,8 @@ footer .col-25:first-of-type a {
 footer .col-25:first-of-type a img {
   display: block;
   max-width: 100%;
+  width: 183px;
+  height: 84px;
   margin-bottom: 35px;
   opacity: 1;
   -moz-transition: opacity 0.2s;
