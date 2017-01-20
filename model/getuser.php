@@ -5,14 +5,14 @@
 
 <?php
 $q = $_GET['q'];
-$con = mysqli_connect('localhost','root','','myband');
+$con = mysqli_connect('localhost','root','','edamvdam');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 
 mysqli_select_db($con,"myband");
 
-$sql="SELECT title, content FROM newsarticles WHERE title LIKE '%$q%'"; //wildcard
+$sql="SELECT title, content FROM events WHERE title LIKE '%$q%'"; //wildcard
 
 $result = mysqli_query($con,$sql);
 echo "<table>

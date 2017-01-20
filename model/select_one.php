@@ -1,6 +1,6 @@
 <?php
 
-$sql = "SELECT * FROM schools WHERE id= " . $id;
+$sql = "SELECT * FROM events WHERE id= " . $id;
 
 $result = $mysqli->query($sql);
 $result = convertResultToArray($result);

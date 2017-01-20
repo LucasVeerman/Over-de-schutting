@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli("localhost", "root", "", "schoolcheck", 3306);
+$mysqli = new mysqli("localhost", "root", "", "edamvdam", 3306);
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
@@ -8,19 +8,12 @@ if ($mysqli->connect_errno) {
     
     $id=$_REQUEST['id'];
     $name=$_REQUEST['name'];
-    $street=$_REQUEST['street'];
-    $streetNumber=$_REQUEST['streetNumber'];
-    $zipCode=$_REQUEST['zipCode'];
-    $telNr=$_REQUEST['telNr'];
-    $email=$_REQUEST['email'];
-    $website=$_REQUEST['website'];
-    $districts_id=$_REQUEST['districts_id'];
-    $openday=$_REQUEST['openday'];
-    $openclass=$_REQUEST['openclass'];
+    $text=$_REQUEST['text'];
     
-    $link_address = '../index.php?action=admin';
     
-    $sql = "UPDATE schools SET name='$name', street='$street', streetNumber='$streetNumber', zipCode='$zipCode', telNr='$telNr', email='$email', website='$website', districts_id='$districts_id', openday='$openday', openclass='$openclass' WHERE id='$id'";
+    $link_address = '../cms.php?action=show';
+    
+    $sql = "UPDATE events SET name='$name', text='$text' WHERE id='$id'";
 
 
 

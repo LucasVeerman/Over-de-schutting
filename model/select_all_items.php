@@ -1,5 +1,5 @@
 <?php
 
-$sql = "SELECT * from newsarticles";
+$sql = "SELECT * from events";
 $result = $mysqli->query($sql);
 $result = convertResultToArray($result);

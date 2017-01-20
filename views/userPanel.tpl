@@ -1,6 +1,6 @@
 <section id="user-panel">
     <div  class="user">
-        <span class="tooltip" title="Account bekijken"></span>
+        <a href="cms.php"><span class="tooltip" title="Account bekijken"></span></a>
     </div>
     <div class="edit">
         <span class="tooltip" title="Pagina bewerken"></span>

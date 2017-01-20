@@ -30,7 +30,7 @@ switch($action){
         $templateParser->display('locations.tpl');
     break;
     case 'agenda':
-        $templateParser->display('agenda.tpl');
+        
     break;
     case 'contact':
         $templateParser->display('contact.tpl');
@@ -39,28 +39,8 @@ switch($action){
     case 'admin':
         $cms_action = isset($_GET['cms_action'])?$_GET['cms_action']:"show";
         $templateParser->display('userPanel.tpl');
-        switch($cms_action)
-        {
-            case 'show':
-                include 'model/select_all_items.php';
-                $templateParser->assign('result',$result);
-                $templateParser->display('cms_show.tpl');
-            break;
-            case 'delete':
-                $id = $_GET['id'];
-                include 'model/delete_item.php';
-            break;
-            case 'insert':
-                $templateParser->display('cms_insert.tpl');  
-            break;
-            case 'edit':
-                $id = isset($_GET['id'])?$_GET['id']:0;
-                include 'model/select_one.php';
-//                include 'model/update.php';
-                $templateParser->assign('result',$result);
-                $templateParser->display('edit.tpl');
-            break;
-        }
+        
+    
        
     break;
 }
